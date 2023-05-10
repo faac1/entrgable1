@@ -4,9 +4,9 @@ function validar() {
     var tipo_registro = document.getElementById("tipo_registro").value;
     var registro = document.getElementById("registro").value;
     var password = document.getElementById("password").value;
-    var confirm_password = document.getElementById("confirm_password").value;
+    var confirmar_password = document.getElementById("confirmar_password").value;
   
-    if (nombre === "" || tipo_registro === "" || registro === "" || password === "" || confirm_password === "") {
+    if (nombre === "" || tipo_registro === "" || registro === "" || password === "" || confirmar_password === "") {
       alert("Por favor, rellena todos los campos.");
       return false;
     }
@@ -27,17 +27,17 @@ function validar() {
         }
     }
   
-    if (password !== confirm_password) {
+    if (password !== confirmar_password) {
       alert("Las contraseñas no coinciden. Por favor, vuelve a escribirlas.");
       return false;
     }
   
-    if (nombre !== "" || tipo_registro !== "" || registro !== "" || password !== "" || confirm_password !== "") {
+    if (nombre !== "" || tipo_registro !== "" || registro !== "" || password !== "" || confirmar_password !== "") {
         alert("todo correcto.");
         window.location.href = "../index2.html";
-      }
+    }
     return false;
-  }
+}
   
 
 function validar1() {
@@ -70,13 +70,13 @@ function validar1() {
     if (tipo_registro !== "" || registro !== "" || password !== "") {
         alert("todo correcto.");
         window.location.href = "../index2.html";
-      }
+    }
     return false;
-  }
+}
   
 
   //subir 
-  $("#formulario_subir").validate({
+$("#formulario_subir").validate({
     rules: {
         nombre: {
             required: true,
@@ -135,7 +135,7 @@ function validar1() {
             required: "Por favor, selecciona una opción."
         }
     }
-});
+})
 
 
 $("#enviar").click(function(){
