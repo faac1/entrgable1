@@ -10,6 +10,7 @@
 
   <title>Grupo Cero</title>
   <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../css/subir.css">
 </head>
 <body>
   <!-- Opcional: enlazando el JavaScript de Bootstrap -->
@@ -62,22 +63,61 @@
             </nav>
           </header>
         </div>
+
+      
+
         <div class="col-md-12 col-xs"></div>
-            <div class="mb-3 pb-0 p-3 ">
-                <label for="exampleFormControlInput1" class="form-label text-white">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="mb-3 pb-0 p-3">
-                <label for="exampleFormControlTextarea1" class="form-label text-white">Descripcion</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="mb-3 pt-0  p-3">
-                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple>
-                <a href="../index2.html"><button type="button" class="btn btn-primary">Enviar</button></a>
-            </div>
+        <h1 class="text-center text-white">Mensajes</h1>
+          <form id="formulario_subir" class="text-white">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo aquí"><br>
+            <label for="tipo_solicitud">Tipo de solicitud:</label>
+            <select id="tipo_solicitud" name="tipo_solicitud">
+              <option value="">--Selecciona una opción--</option>
+              <option value="reclamo">Reclamo</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="venta">Venta</option>
+              <option value="otro">Otro</option>
+            </select><br>
+
+            <label for="mensaje">Mensaje</label><br>
+            <textarea name="mensaje" id="mensaje" cols="65" rows="15"></textarea><br>
+      
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha"><br>
+      
+            <label for="telefono">Teléfono (sin codigo de area):</label>
+            <input type="number" id="telefono" name="telefono"><br>
+      
+            <label>categorias :</label><br>
+            <input type="checkbox" id="escultura" name="categorias" value="escultura">
+            <label for="escultura">Escultura</label><br>
+            <input type="checkbox" id="pinturas" name="categorias" value="pinturas">
+            <label for="pinturas">Pinturas</label><br>
+            <input type="checkbox" id="tejidos" name="categorias" value="tejidos">
+            <label for="tejidos">Tejidos</label><br>
+            <input type="checkbox" id="orfebrería" name="categorias" value="orfebrería">
+            <label for="orfebrería">Orfebrería</label><br>
+            <input type="checkbox" id="Otro" name="categorias" value="Otro">
+            <label for="Otro">Otro</label><br><br>
+      
+            <label>seleccionar:</label><br>
+            <input type="radio" id="venta" name="seleccionar" value="venta">
+            <label for="venta">Venta</label><br>
+            <input type="radio" id="intercambio" name="seleccionar" value="intercambio">
+            <label for="intercambio">Intercambio</label><br>
+            <input type="radio" id="donacion" name="seleccionar" value="donacion">
+            <label for="donacion">Donacion</label><br> 
+            <input type="radio" id="otro" name="seleccionar" value="otro">
+            <label for="otro">Otro</label><br><br>
+      
+            <button type="button" id="enviar">Enviar</button>
+          </form>
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="../js/forminicioses.js"></script>
 </body>
 </html>
